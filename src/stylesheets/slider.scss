@@ -1,0 +1,91 @@
+@mixin rangeThumb {
+  width: 18px;
+  height: 18px;
+  margin: -8px 15px  0;
+  border-radius: 50%;
+  background-image: url('../assets/images/slider.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  border: 0 !important;
+}
+
+@mixin rangeTrack {
+  width: 70%;
+  height: 6px;
+  cursor: pointer;
+  background: #f5f7fa;
+  border: 0px solid #f5f7fa;
+  border-radius: 10px;
+}
+
+.range {
+  position: relative;
+  width: 500px;
+  height: 5px;
+  margin: 0 160px;
+  text-align: left;
+}
+
+.range input {
+  width: 80%;
+  position: absolute;
+  height: 0;
+  -webkit-appearance: none;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; // needed again for Chrome & Safari
+    @include rangeThumb;
+  }
+
+ 
+  // Track
+  &::-webkit-slider-runnable-track {
+    @include rangeTrack;
+  }
+
+  &:focus { // override outline/background on focus
+    background: none;
+    outline: none;
+  }
+}
+
+// Labels below slider
+.range-labels {
+  list-style: none;
+  margin: 0 100px;
+  
+  li {
+    position: relative;
+    float: left;
+    width: 100px;
+    text-align: center;
+    color: $color-primary;
+    font-size: $font-size-10;
+    cursor: pointer;
+    top: 15px;
+    left: 3px;
+    
+    &::before {
+      position: absolute;
+      top: -25px;
+      right: 0;
+      left: 0;
+      content: "";
+      width: 9px;
+      height: 9px;
+      background: #ffffff;
+      border: 2px solid #f5f7fa;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+  }
+    .selected::before {
+    background-image: url('../assets/images/slider.svg');
+    background-repeat: no-repeat;
+  }
+  
+  .active.selected::before {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size:$base-font-size;
+}
+section {
+  margin: 0 auto;
+}
+span {
+  line-height: 2;
+  font-size: $font-size-14;
+  font-weight: $font-weight-500;
+}
+header {
+  color:$color-blue-dark;
+  text-align: center;
+  padding: 20px 0;
+  font-size: $font-size-40;
+  font-weight: $font-weight-500;
+}
+
+p {
+  font-size: $font-size-16;
+  color:$color-black-dark;
+  font-weight: $font-weight-800;
+}
+
+label {
+  font-size: $font-size-14;
+  font-weight: $font-weight-500;
+  color: $color-black-light;
+}
+
+input {
+  font-size: $font-size-12;
+}

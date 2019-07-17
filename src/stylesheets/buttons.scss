@@ -1,0 +1,26 @@
+.button {
+  border-radius: .25rem;
+  text-transform: uppercase;
+  font-size: $font-size-14;
+  line-height: 1.2;
+  padding: 9px 18px;
+  transition: all .15s ease;
+  outline:none;
+  display: inline-block;
+  &:hover {
+    box-shadow: 0 7px 14px $color-box-shadow, 0 3px 6px $color-box-shadow !important;
+    transform: translateY(-1px);
+    outline: none;
+    background: $color-white;
+    opacity: 10%;
+  }
+  &.button-primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  a {
+    text-decoration: none;
+    color: $color-white;
+    font-weight: $font-weight-500;
+  }
+}

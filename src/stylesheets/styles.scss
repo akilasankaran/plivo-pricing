@@ -1,0 +1,68 @@
+@import 'constants';
+@import 'decorations';
+@import 'slider';
+@import 'buttons';
+@import 'custom-checkboxes';
+@import 'defaults';
+@import 'maps';
+
+// page specific stylings - cost estimation section
+.row {
+  width: 700px;
+  margin: 15px auto;
+  background-color:$color-grey-light;
+  height: 150px;
+  .left-column,
+  .right-column {
+    width:350px;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    .cost {
+      font-size: $font-size-20;
+      color: $color-blue-dark;
+      margin: 0 90px;
+    }
+  }
+  .left-column {
+    position:relative;
+    &::after {
+      content: '';
+      border-right: 1px solid #d7d7d7;
+      position: absolute;
+      right: 0px;
+      height: 90px;
+      top: 26px;
+    }
+  }
+}
+.wrapper {
+  box-shadow: 0 0 8px 0 #e8eaf1;
+  border-radius: 4px;
+  width: 700px;
+  margin: 0 auto;
+  &:hover {
+    box-shadow: 0 0 21px 0 #e3e5ec;
+    transform: scale(1.02);
+  }
+}
+
+#chartdiv {
+  max-width: 1100px;
+  height: 400px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+#info {
+  max-width: 1100px;
+  border: 1px solid #ddd;
+  margin: 10px auto;
+  padding: 5px 8px;
+}
+.country-tags {
+  position: relative;
+  width:700px;
+  margin: 0 auto;
+}
